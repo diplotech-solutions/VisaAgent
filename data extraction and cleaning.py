@@ -1,3 +1,10 @@
+"""
+FURTHER DEVELOPMENT IN THIS SCRIPT:
+1. Develop the scraping function to categorize the text based on types: Normal text, tables, etc..., and store them appropriately like CSV for tables, plain text for normal text
+2. Develop the cleaning process to handle different text types accordingly
+3. Update the 'Website' keyword to accept multiple URLs as input for scraping and process them in loop
+"""
+
 import requests
 from bs4 import BeautifulSoup
 import re
