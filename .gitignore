@@ -1,0 +1,13 @@
+*
+
+!main.py
+!scraper.py
+!train.py
+!requirements.txt
+!.gitignore
+
+*.pyc
+
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store

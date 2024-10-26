@@ -1,1 +1,7 @@
-nltk
+requests
+beautifulsoup4
+torch
+unsloth
+transformers
+trl
+datasets
