@@ -1,4 +1,4 @@
-# Visa AI Agent
+# Visa AI Assistant
 
 This repository provides a solution to automate the scraping, cleaning, and fine-tuning of the LLaMA-3.1-8B model using unsloth AI for assisting in gerneral queries on german visa application.
 
