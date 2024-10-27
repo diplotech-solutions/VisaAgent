@@ -11,6 +11,17 @@ This repository provides a solution to automate the scraping, cleaning, and fine
 - `.gitignore`: Ignore list for unnecessary files to exclude from Git commits.
 
 ## Instructions to Run the Code
+To get started, clone this repository to your local machine using the following command:
+
+```bash
+git clone git@github.com:diplotech-solutions/VisaAgent.git
+```
+
+Once cloned, navigate into the repository directory:
+
+```bash
+cd VisaAgent
+```
 
 ### Install dependencies:
 
