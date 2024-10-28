@@ -1,11 +1,12 @@
 from unsloth import FastLanguageModel
 from transformers import TrainingArguments
-from trl import SFTTrainer, is_bfloat16_supported
+from trl import SFTTrainer
 import torch
 
 def train_model(dataset):
     max_seq_length = 2048
-    dtype = None
+    #dtype = None
+    dtype = torch.float16
     load_in_4bit = True
 
     model, tokenizer = FastLanguageModel.from_pretrained(
@@ -20,7 +21,7 @@ def train_model(dataset):
         r=16,
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
         lora_alpha=16,
-        lora_dropout=0,
+        lora_dropout=0.05,
         bias="none",
         use_gradient_checkpointing="unsloth",
         random_state=3407,
@@ -34,8 +35,7 @@ def train_model(dataset):
         warmup_steps=5,
         max_steps=60,
         learning_rate=2e-4,
-        fp16=not is_bfloat16_supported(),
-        bf16=is_bfloat16_supported(),
+        fp16=True,
         logging_steps=1,
         optim="adamw_8bit",
         weight_decay=0.01,
