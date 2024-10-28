@@ -5,3 +5,6 @@ unsloth
 transformers
 trl
 datasets
+
+pytorch-cuda
+cudnn
